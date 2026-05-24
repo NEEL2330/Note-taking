@@ -6,7 +6,7 @@ export const getAllnotes = async (req,res) => {
         res.json(notes);
     } catch (error) {
         console.log("Error in getAllnodes", error);
-        res.json({message: "Interanl server error"});
+        res.status(500).json({message: "Internal server error"});
     }
 };
 
@@ -17,7 +17,7 @@ export const getnotebyid = async (req,res) => {
         res.json(notes);
     } catch (error) {
         console.log("Error in getnodesbyid", error);
-        res.json({message: "Interanl server error"});
+        res.status(500).json({message: "Internal server error"});
     }
 };
 
@@ -29,7 +29,7 @@ export const CreateNote = async (req,res) => {
         res.json(savednote);
    } catch(error) {
         console.log("Error in CreateNote", error);
-        res.json({message: "Interanl server error"});
+        res.status(500).json({message: "Internal server error"});
    }
 };
 
@@ -41,7 +41,7 @@ export const UpdateNotes = async (req,res) => {
         res.json(Update);
     } catch (error) {
         console.log("Error in Update Note", error);
-        res.json({message: "Interanl server error"});
+        res.status(500).json({message: "Internal server error"});
     }
 };
 
@@ -52,6 +52,6 @@ export const DeleteNotes = async (req,res) => {
         res.json({message: "Note deleted"});
     } catch (error) {
         console.log("Error in delete Note", error);
-        res.json({message: "Interanl server error"});
+        res.status(500).json({message: "Internal server error"});
     }
 };
