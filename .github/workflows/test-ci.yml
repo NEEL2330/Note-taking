@@ -26,3 +26,4 @@ jobs:
           # Intentionally import a missing package to generate a real traceback
           import non_existent_auth_package
           "
+
